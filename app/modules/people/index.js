@@ -1,5 +1,6 @@
 (function (people) {
-	var data = require('../data'),
+	'use strict';
+	let data = require('../data'),
 		auth = require('../auth');
 
 	people.init = function init(app) {
@@ -10,8 +11,7 @@
 				if (err) {
 					res.send(400, err);
 				} else {
-					res.set('Content-Type', 'application/json');
-					res.send(peopleResult);
+					res.json(peopleResult);
 				}
 			});
 		});
@@ -25,9 +25,8 @@
 				data.people.get(id, function (err, peopleResult) {
 					if (err) {
 						res.send(400, err);
-					} else {
-						res.set('Content-Type', 'application/json');
-						res.send(peopleResult);
+					} else {						
+						res.json(peopleResult);
 					}
 				});
 			});
