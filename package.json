@@ -2,7 +2,7 @@
   "name": "api.plentycode.com",
   "version": "0.1.3",
   "engines": {
-   "node": "6.0.0"
+   "node": "6.0"
  },
   "description": "API exposed methods for plentycode.com",
   "main": "server.js",
